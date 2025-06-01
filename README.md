@@ -31,6 +31,12 @@ The application supports the following core functionalities:
 
 ---
 
+## 📽️ Demo Video
+
+▶️ [Watch Demo on Google Drive] (https://drive.google.com/file/d/1oDDZo-kvfzsfUJmYvANj-1lC1tiWUvpo/view?usp=sharing)
+
+---
+
 ## 👥 Team - Contributors
 
 - **Yadu Pillai** - 24966285  
