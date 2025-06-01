@@ -1,64 +1,57 @@
 # IoTBay Web Application Prototype
 
-This is a Java web application prototype for the IoTBay project, built as part of the UTS 41025 Introduction to Software Development subject. It uses **JSP**, **Servlets**, and **JavaBeans**, following the **MVC architecture**, and is deployed using **GlassFish Server** via **NetBeans IDE**.
+This is a Java web application prototype for the **IoTBay project**, developed as part of the UTS subject **41025 - Introduction to Software Development**. It follows the **Model-View-Controller (MVC)** architecture using **JSP**, **Servlets**, and **JavaBeans**, and is deployed using the **GlassFish Server** via **NetBeans IDE**.
 
+---
 
-Dependencies & Environments Required
+## ✨ Key Features Implemented
 
-## Java JDK 17
-## Netbeans IDE 25 (https://netbeans.apache.org/front/main/download/)
-## Eclipse GlassFish 7.0.23, Jakarta EE Web Profile, 10 (https://glassfish.org/download)
+The application supports the following core functionalities:
 
+1. **Online User Access Management**  
+   - Registration, login, logout, and session control  
+   - Admin and customer account roles  
+   - Secure user authentication with validation
 
-1. Clone the Repository
-	- git clone https://github.com/your-username/ISD_GRP.git
-	- Note this will clone in the current directory 
+2. **IoT Device Catalogue Management**  
+   - View and search IoT device listings  
+   - Admins can add, update, or delete products  
+   - Categorized browsing and filtering
 
-2. Open the Project in Netbeans	
-	- Launch NetBeans IDE
-	- Go to File > Open Project
-	- Find the cloned project and open it
-	- Netbeans should detect it automatically and load it
+3. **Order Management**  
+   - Customers can add items to cart and place orders  
+   - Order history and status tracking  
+   - Admins can view and manage all orders
 
-3. Setup GlassFish Server
-	- Go to Services Tab on the left hand side -> Servers -> Right click -> Add Server -> Choose GlassFish Server
-	- Browse to the downloaded GlassFish Server
-	- Next -> Finish
+4. **Payment Management**  
+   - Payment form with validation  
+   - Simulated payment confirmation  
+   - View payment history for orders
 
-4. Setup Derby Database
-	- The application uses Apache Derby (Java DB) which comes bundled with NetBeans
-	- Start the Derby Database Server from NetBeans:
-	  - Go to the Services tab > Databases
-	  - Right-click on "Java DB" and select "Start Server"
-	- Create the Database:
-	  - In the Services tab, right-click on "Java DB" and select "Create Database"
-	  - Set the following parameters:
-	    - Database Name: iotbay
-	    - User Name: iotbay
-	    - Password: iotbay
-	    - Confirm Password: iotbay
-	  - Click OK to create the database
-	- Initialize the Database Schema:
-	  - The application will automatically connect to this database
-	  - To manually initialize the database with the required schema, you can run the DatabaseInitializer:
-	    - Right-click on the project > Run File > src/main/java/com/util/DatabaseInitializer.java
-	  - This will create all necessary tables and sample data
-	- Connection Parameters (for reference):
-	  - JDBC URL: jdbc:derby://localhost:1527/iotbay
-	  - Username: iotbay
-	  - Password: iotbay
+---
 
-5. Run the App
-	- Right-click the project > Run
-	- Netbeans will deploy it
-	- It should open in your browser at: http://localhost:8080/<folder_name>
+## 👥 Team - Contributors
 
-## Troubleshooting Database Issues
+- **Yadu Pillai** - 24966285  
+- **Allanah Wadey** - 24758688  
+- **Kimleng Thai** - 24577494  
+- **Faren Susanto** - 14621609
 
-- If you encounter database connection issues, ensure the Derby server is running.
-- To verify the database has been set up correctly, in NetBeans:
-  - Services tab > Databases > jdbc:derby://localhost:1527/iotbay [iotbay on IOTBAY]
-  - Right-click and select "Connect"
-  - Expand the connection to see Tables, Views, etc.
-  - You should see tables like Users, Device, Orders, etc.
-- If tables are missing, manually run the DatabaseInitializer as described above.
+---
+
+## ⚙️ Dependencies & Environment
+
+- **Java JDK 17**  
+- **NetBeans IDE 25**  
+  [Download NetBeans](https://netbeans.apache.org/front/main/download/)  
+- **Eclipse GlassFish 7.0.23**, Jakarta EE Web Profile 10  
+  [Download GlassFish](https://glassfish.org/download)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/ISD_GRP.git
