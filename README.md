@@ -1,3 +1,4 @@
+
 # IoTBay Web Application Prototype
 
 This is a Java web application prototype for the **IoTBay project**, developed as part of the UTS subject **41025 - Introduction to Software Development**. It follows the **Model-View-Controller (MVC)** architecture using **JSP**, **Servlets**, and **JavaBeans**, and is deployed using the **GlassFish Server** via **NetBeans IDE**.
@@ -55,3 +56,90 @@ The application supports the following core functionalities:
 
 ```bash
 git clone https://github.com/your-username/ISD_GRP.git
+```
+
+---
+
+### 2. Open the Project in NetBeans
+
+- Launch **NetBeans IDE**  
+- Go to **File > Open Project**  
+- Navigate to the cloned `ISD_GRP` folder and open it  
+- NetBeans should detect and load the project automatically
+
+---
+
+### 3. Setup GlassFish Server
+
+- Open the **Services** tab  
+- Expand **Servers**  
+- Right-click → **Add Server**  
+- Select **GlassFish Server**  
+- Browse to the GlassFish installation directory  
+- Click **Next > Finish**
+
+---
+
+### 4. Setup Derby Database
+
+The project uses **Apache Derby (Java DB)** bundled with NetBeans.
+
+#### 4.1 Start Derby Server
+
+- In NetBeans, open the **Services** tab → **Databases**  
+- Right-click on **Java DB** → **Start Server**
+
+#### 4.2 Create the Database
+
+- Right-click on **Java DB** → **Create Database**  
+- Enter the following details:
+
+  ```
+  Database Name: iotbay
+  User Name: iotbay
+  Password: iotbay
+  Confirm Password: iotbay
+  ```
+
+- Click **OK** to create the database
+
+#### 4.3 Initialize the Database Schema
+
+- To populate tables and sample data:  
+  - Locate `src/main/java/com/util/DatabaseInitializer.java`  
+  - Right-click the file → **Run File**
+
+#### 4.4 JDBC Connection Info (Reference)
+
+- URL: `jdbc:derby://localhost:1527/iotbay`  
+- Username: `iotbay`  
+- Password: `iotbay`
+
+---
+
+### 5. Run the Application
+
+- Right-click the project in NetBeans → **Run**  
+- NetBeans deploys the app on GlassFish  
+- It should open automatically in your browser at:
+
+```
+http://localhost:8080/<project_folder_name>
+```
+
+---
+
+## 🛠️ Troubleshooting Database Issues
+
+- Ensure Derby Server is running:  
+  - In NetBeans, go to **Services > Databases**  
+  - Right-click **Java DB** → **Start Server**
+
+- Verify the database connection:  
+  - In **Services > Databases**, find `jdbc:derby://localhost:1527/iotbay`  
+  - Right-click → **Connect**  
+  - Expand connection to check tables like Users, Device, Orders, etc.
+
+- If tables are missing, rerun `DatabaseInitializer.java` as described above.
+
+---
