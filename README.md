@@ -1,5 +1,5 @@
 
-# IoTBay Web Application
+# IoTBay Java Web Application
 
 This is a Java web application for the **IoTBay project**, developed as part of the UTS subject **41025 - Introduction to Software Development**. It follows the **Model-View-Controller (MVC)** architecture using **JSP**, **Servlets**, and **JavaBeans**, and is deployed using the **GlassFish Server** via **NetBeans IDE**.
 
