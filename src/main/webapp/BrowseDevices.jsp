@@ -186,6 +186,31 @@
         .popup-error {
             background-color: #f44336;
         }
+        .btn-addcart {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            /* ensure the Add to Cart text is aligned centered */
+            padding: 6px 6px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 12px;
+            box-shadow: 0 3px 5px rgba(255, 111, 97, 0.4);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            white-space: nowrap;
+
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+        }
+
+
+        .btn-addcart:hover {
+            background-color: #ff4a3d; /* darker coral on hover */
+            box-shadow: 0 6px 10px rgba(255, 74, 61, 0.5);
+        }
+
     </style>
     <script>
         // Function to show popup message
@@ -310,13 +335,17 @@
                             <td><fmt:formatNumber value="${device.price}" type="currency" /></td>
                             <td>${device.stockQuantity}</td>
                             <td>
-                                <form action="${pageContext.request.contextPath}/orders/" method="post" style="display: inline;">
+                                <form action="${pageContext.request.contextPath}/orders/" method="post" style="display: inline-block;">
                                     <input type="hidden" name="action" value="add_to_cart">
                                     <input type="hidden" name="deviceId" value="${device.deviceId}">
-                                    <input type="number" name="quantity" value="1" min="1" style="width: 60px;">
-                                    <button type="submit" class="btn">Add to Cart</button>
+
+                                    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px; max-width: 80px;">
+                                        <input type="number" name="quantity" value="1" min="1" style="width: 100%; box-sizing: border-box;">
+                                        <button type="submit" class="btn-addcart" style="width: 100%;">Add to Cart</button>
+                                    </div>
                                 </form>
                             </td>
+
                             <c:if test="${user.staff}">
                                 <td>
                                     <a href="${pageContext.request.contextPath}/devices/edit?id=${device.deviceId}">Edit</a> |
